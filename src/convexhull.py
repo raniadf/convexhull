@@ -70,17 +70,6 @@ def extremePoints(arrList):
             distance = newdist
             Pn = i
     
-    # 3. Cari min tetap dengan mencari yang jaraknya terjauh dari max
-    # maxx = arrList[Pn, 0]
-    # maxy = arrList[Pn, 1]
-    # for i in range (len(arrList)) :
-    #     x1 = arrList[i, 0]
-    #     y1 = arrList[i, 1]
-    #     newdist = ((maxx - x1)**2 + (maxy - y1)**2)**0.5
-    #     if (newdist > distance) :
-    #         distance = newdist
-    #         P1 = i
-
     # 3. Mengembalikan P1 dan Pn
     return P1, Pn
 

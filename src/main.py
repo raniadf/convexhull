@@ -7,18 +7,16 @@ import os.path
 from os import path
 
 ## 1. INPUT NAMA DATASET
-print("               Selamat datang di            ")
-print("   _   _   _   _   _   _     _   _   _   _  ")
+print("\n   _   _   _   _   _   _     _   _   _   _  ")
 print("  / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ ")
 print(" ( C | o | n | v | e | x ) ( H | u | l | l )")
-print("  \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ ")
-print("")
+print("  \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \n")
 
 print("Terdapat beberapa dataset yang dapat diakses, antara lain =")
-print("1. Iris")
-print("2. Wine")
-print("3. Cancer")
-print("4. File CSV (Pastikan sudah ada di folder test)")
+print("1 Iris")
+print("2 Wine")
+print("3 Cancer")
+print("4 File CSV (Pastikan sudah ada di folder test)")
 print("")
 namadata = int(input("Pilihan (dalam angka) = "))
 
@@ -40,10 +38,12 @@ elif (namadata == 3) :
     df['Target'] = pd.DataFrame(data.target)
 elif (namadata == 4) :
     data = input("Nama file csv (c/: heart.csv) = ")
-    while (path.exists(data) == false) :
+    file = ".\\test\\" + data
+    while (path.exists(file) == false) :
         print("File tidak dapat ditemukan")
         data = input("Nama file csv (c/: heart.csv) = ")
-    df = pd.read_csv(data)
+        file = ".\\test\\" + data
+    df = pd.read_csv(file)
     punyatarget = false
     if ('target') in df :
         punyatarget = true
@@ -58,9 +58,9 @@ if (punyatarget) :
         col = len(df.columns) - 1
         print("Dataset ini terdiri atas ", col, "kolom, yaitu = ")
         for i in range (col) :
-            print(i+1,".", data.feature_names[i])
+            print(i+1, data.feature_names[i])
         print("")
-        print("Silahkan pilih kolom acuan!")
+        print("Silahkan pilih kolom acuan (dalam angka)!")
         xbenar = false
         ybenar = false
         while (xbenar == false) :
@@ -90,7 +90,6 @@ if (punyatarget) :
                 plt.plot(bucket[simplex, 0], bucket[simplex, 1], colors[i%3])
 
     elif (namadata == 4):
-        print("berhasil masuk")
         col = len(df.columns) - 1
         print("Dataset ini terdiri atas ", col, "kolom, yaitu = ")
         index = 1
@@ -100,7 +99,7 @@ if (punyatarget) :
             print(index, col_name)
             index = index + 1
         print("")
-        print("Silahkan pilih kolom acuan!")
+        print("Silahkan pilih kolom acuan (dalam angka)!")
         xbenar = false
         ybenar = false
         while (xbenar == false) :
