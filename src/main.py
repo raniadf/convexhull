@@ -23,18 +23,12 @@ namadata = int(input("Pilihan (dalam angka) = "))
 if (namadata == 1) :
     data = datasets.load_iris()
     punyatarget = true
-    df = pd.DataFrame(data.data, columns=data.feature_names)
-    df['Target'] = pd.DataFrame(data.target)
 elif (namadata == 2) :
     data = datasets.load_wine()
     punyatarget = true
-    df = pd.DataFrame(data.data, columns=data.feature_names)
-    df['Target'] = pd.DataFrame(data.target)
 elif (namadata == 3) :
     data = datasets.load_breast_cancer()
     punyatarget = true
-    df = pd.DataFrame(data.data, columns=data.feature_names)
-    df['Target'] = pd.DataFrame(data.target)
 elif (namadata == 4) :
     data = input("Nama file csv (c/: heart.csv) = ")
     file = ".\\test\\" + data
