@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from sklearn import datasets
 from sympy import false, true
 import convexhull
-import os.path
 from os import path
 
 ## 1. INPUT NAMA DATASET
