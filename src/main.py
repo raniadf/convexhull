@@ -6,7 +6,7 @@ import convexhull
 from os import path
 
 ## 1. INPUT NAMA DATASET
-print("\n      _   _   _   _   _   _     _   _   _   _  ")
+print("\n       _   _   _   _   _   _     _   _   _   _  ")
 print("      / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ ")
 print("     ( C | o | n | v | e | x ) ( H | u | l | l )")
 print("      \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \n")
