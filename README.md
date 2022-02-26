@@ -13,33 +13,20 @@ ConvexHull merupakan himpunan titik terkecil yang bentuknya mengandung seluruh h
 
 ### Dependencies
 - [Python](https://www.python.org/downloads/)
-- Numpy 
-  ``` 
-  pip install numpy 
+- Library : Numpy, Pandas, Sympy, Matplotlib, Sklearn
+  
+  Cara mengunduh library = Setelah clone repository ini, buka terminal dan ubah directory ke root folder repo ini (convexhull) dan ketik 
   ```
-- Pandas
+  pip install -r requirements.txt
   ```
-  pip install pandas
-  ```
-- Sympy
-  ```
-  pip3 install sympy
-  ```
-- Matplotlib
-  ```
-  python -m pip install -U matplotlib
-  ```
-- Sklearn
-  ```
-  pip install -U scikit-learn
-  ```
+  
 
 ### Program Execution
 1. Pastikan repository ini sudah ada di local repository laptop. Apabila belum, silahkan di *clone* terlebih dahulu dengan cara membuka terminal kemudian mengetik
    ```
    git clone https://github.com/raniadf/convexhull.git
    ```
-2. Ubah directory anda ke root dir dari repository ini (convexhull)
+2. Ubah directory anda ke root folder repository ini (convexhull)
 3. Pada terminal, ketik
    ```
    python src/main.py
