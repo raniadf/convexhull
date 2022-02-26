@@ -6,16 +6,17 @@ import convexhull
 from os import path
 
 ## 1. INPUT NAMA DATASET
-print("\n   _   _   _   _   _   _     _   _   _   _  ")
-print("  / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ ")
-print(" ( C | o | n | v | e | x ) ( H | u | l | l )")
-print("  \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \n")
+print("\n      _   _   _   _   _   _     _   _   _   _  ")
+print("      / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ ")
+print("     ( C | o | n | v | e | x ) ( H | u | l | l )")
+print("      \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \n")
+print("===========================================================")
 print("Terdapat beberapa dataset yang dapat diakses, antara lain =")
 print("1 Iris")
 print("2 Wine")
 print("3 Cancer")
 print("4 File CSV (Pastikan sudah ada di folder test)")
-print("")
+print("===========================================================")
 namadata = int(input("Pilihan (dalam angka) = "))
 
 ## 2. LOAD DATASET & MEMBUAT DATAFRAME
@@ -56,10 +57,12 @@ if (punyatarget) :
         df = pd.DataFrame(data.data, columns=data.feature_names)
         df['Target'] = pd.DataFrame(data.target)
         col = len(df.columns) - 1
+        print("===========================================================")
         print("Dataset ini terdiri atas ", col, "kolom, yaitu = ")
         for i in range (col) :
             print(i+1, data.feature_names[i])
-        print("\nSilahkan pilih kolom acuan (dalam angka)!")
+        print("===========================================================")
+        print("Silahkan pilih kolom acuan (dalam angka)!")
         while (True) :
             col1 = int(input("Acuan X = "))
             if (col1 > 0 and col1 <= col) :
@@ -89,13 +92,15 @@ if (punyatarget) :
     # Menggunakan dataset csv`
     elif (namadata == 4):
         ## 3. MEMBUAT DATAFRAME
+        print("===========================================================")
         print("Dataset ini terdiri atas ", len(df.columns) - 1, "kolom, yaitu = ")
         col = df.columns.values.tolist()
         for i in range(len(df.columns)): 
             if (col[i] == "target") :
                 continue
             print(i + 1, col[i])
-        print("\nSilahkan pilih kolom acuan (dalam angka)!")
+        print("===========================================================")
+        print("Silahkan pilih kolom acuan (dalam angka)!")
         while (True) :
             col1 = int(input("Acuan X = "))
             if (col1 > 0 and col1 <= len(col)) :
