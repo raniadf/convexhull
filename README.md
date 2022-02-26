@@ -39,7 +39,6 @@ ConvexHull merupakan himpunan titik terkecil yang bentuknya mengandung seluruh h
    ```
    git clone https://github.com/raniadf/convexhull.git
    ```
-git clone 
 2. Ubah directory anda ke root dir dari repository ini (convexhull)
 3. Pada terminal, ketik
    ```
