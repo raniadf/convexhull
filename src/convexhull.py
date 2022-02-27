@@ -108,13 +108,22 @@ def findHull1(arrList, S, P1, Pn) :
                 elif (determinant(arrList[titikterjauh], arrList[Pn], arrList[temp]) > 0) :
                     S2.append(temp)
                     continue
-            if (arrList[temp, 0] > arrList[titikterjauh, 0]) :
+            elif (arrList[temp, 0] > arrList[titikterjauh, 0]) :
                 if (determinant(arrList[titikterjauh], arrList[Pn], arrList[temp]) > 0) :
                     S2.append(temp)
                     continue
                 elif (determinant(arrList[P1], arrList[titikterjauh], arrList[temp]) > 0) :
                     S1.append(temp)
                     continue
+            else :
+                if (arrList[temp, 1] > arrList[titikterjauh, 1]) :
+                    if (determinant(arrList[P1], arrList[titikterjauh], arrList[temp]) > 0) :
+                        S1.append(temp)
+                        continue
+                else :
+                    if (determinant(arrList[titikterjauh], arrList[Pn], arrList[temp]) > 0) :
+                        S2.append(temp)
+                        continue
         
         # 1.3 Melakukan iterasi
         findHull1(arrList, S1, P1, titikterjauh)
@@ -155,19 +164,28 @@ def findHull2(arrList, S, Pn, P1) :
         for i in range (len(S)) :
             temp = S[i]
             if (arrList[temp, 0] > arrList[titikterjauh, 0]) :
-                if (determinant(arrList[Pn], arrList[titikterjauh], arrList[temp]) >= 0) :
+                if (determinant(arrList[Pn], arrList[titikterjauh], arrList[temp]) > 0) :
                     S1.append(temp)
                     continue
-                elif (determinant(arrList[titikterjauh], arrList[P1], arrList[temp]) >= 0) :
+                elif (determinant(arrList[titikterjauh], arrList[P1], arrList[temp]) > 0) :
                     S2.append(temp)
                     continue
-            if (arrList[temp, 0] < arrList[titikterjauh, 0]) :
-                if (determinant(arrList[titikterjauh], arrList[P1], arrList[temp]) >= 0) :
+            elif (arrList[temp, 0] < arrList[titikterjauh, 0]) :
+                if (determinant(arrList[titikterjauh], arrList[P1], arrList[temp]) > 0) :
                     S2.append(temp)
                     continue
-                elif (determinant(arrList[Pn], arrList[titikterjauh], arrList[temp]) >= 0) :
+                elif (determinant(arrList[Pn], arrList[titikterjauh], arrList[temp]) > 0) :
                     S1.append(temp)
                     continue
+            else :
+                if (arrList[temp, 1] > arrList[titikterjauh, 1]) :
+                    if (determinant(arrList[Pn], arrList[titikterjauh], arrList[temp]) > 0) :
+                        S1.append(temp)
+                        continue
+                else :
+                    if (determinant(arrList[titikterjauh], arrList[P1], arrList[temp]) > 0) :
+                        S2.append(temp)
+                        continue
 
         # 1.3 Melakukan iterasi
         findHull2(arrList, S1, Pn, titikterjauh)
